@@ -1,0 +1,167 @@
+<!--
+    Tag <table>
+
+        Prós:
+        - Visualização de dados via linhas e colunas;
+        - Boa acessibilidade para leitura dos dados;
+
+        Contras:
+        - Pouco flexível;
+        - Precisade estilização para melhor visualização;
+
+    OBS: Não usar para criar o seu layout.
+-->
+
+<!--
+    Tabela simples:
+
+    Legenda:
+    - "th" = Título da tabela;
+    - "tr" = Linha de tabela;
+    - "td" = Descrição de conteúdo normal na
+    - "caption" = Título da tabela
+    - "thead" = Linha primária da tabela
+    - "tbody" = Conteúdo da tabela
+    - "tfoot" = Linha final da tabela
+-->
+
+<table>
+
+    <caption>Título da tabela</caption>
+
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>João</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Larissa</td>
+            <td>19</td>
+        </tr>
+
+    <tfoot>
+        <tr>
+            <td>Total:</td>
+            <td>38 anos</td>
+        </tr>
+    </tfoot>
+
+</table><br><br><br><br><br>
+
+<!--
+    Tabela complexa:
+    Temos aqui 2 produtos e 2 lojas. Queremos saber quantos produtos foram vendidos e quantos foram produzidos em cada loja.
+
+    Legenda:
+    - "rowspan" = Mesclar linhas
+    - "colspan" = Merclar colunas
+    - "span" = Duplicar
+    - "colgroup" = Selecionar grupo
+    - "style" = Estilizar
+-->
+
+<table border="1">
+
+    <caption>Produzidos x Vendidos por loja</caption>
+
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: blue;">
+        <col span="2" style="background-color: brown;">
+
+    </colgroup>
+
+    <Thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">Mineirão</th>
+            <th colspan="2">Cestão</th>
+        </tr>
+
+        <tr>
+            <th>Produzidos</th>
+            <th>Vendidos</th>
+            <th>Produzidos</th>
+            <th>Vendidos</th>
+        </tr>
+    </Thead>
+
+    <tbody>
+        <tr>
+            <th>Vassouras</th>
+            <td>50</td>
+            <td>40</td>
+            <td>60</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <th>Baldes</th>
+            <td>30</td>
+            <td>20</td>
+            <td>40</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+</table><br><br><br><br><br>
+
+<!--
+    Acessibilidade:
+    A ferramenta "scope" é utilizada para garantir a acessibilidade do usuário. Ela vai definir os elementos da tabela.
+
+    - "scope='colgroup'" : Define o elemento como um grupo de tabelas.
+    - "scope='col'" : Define o elemento como uma coluna.
+    - "scope='row'" : Define o elemento como uma linha.
+-->
+
+<table>
+
+    <caption>Produzidos x Vendidos por loja</caption>
+
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: greenyellow;">
+        <col span="2" style="background-color: cornflowerblue;">
+
+    </colgroup>
+
+    <Thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Mineirão</th>
+            <th colspan="2" scope="colgroup">Cestão</th>
+        </tr>
+
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+        </tr>
+    </Thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">Vassouras</th>
+            <td>50</td>
+            <td>40</td>
+            <td>60</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Baldes</th>
+            <td>30</td>
+            <td>20</td>
+            <td>40</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+</table><br><br><br><br><br>

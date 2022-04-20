@@ -1,0 +1,112 @@
+<!--
+    Neste arquivo, e possível visualizar como criar um formulário básico em HTML.
+-->
+
+<form>
+    E-mail: <input type="text" name="email"><br>
+    Senha: <input type="password" name="senha">
+</form><br> <br> <br> <br>
+
+<!--
+    Ao criar um formulário, é necessário colocar um "method" e um "action" para que possa direcionar esse formulário para um banco de dados.
+-->
+
+<!--
+    Parâmetros/Atributos do <input>:
+
+    -autocomplete = autocompletar
+    -autofocus
+    -disabled
+    -max
+    -maxlenght = máximo de caracteres
+    -min
+    -name = id do input
+    -pattern
+    -placeholder
+    -readonly = somente leitura
+    -required = obrigatório
+    -size
+    -type
+    -value
+    -step
+    -cols
+    -rows
+-->
+
+<!--
+    Como funciona a tag "placeholder":
+-->
+
+<form>
+    E-mail: <input type="text" name="email" placeholder="Insira seu e-mail"><br>
+    Senha: <input type="password" name="senha" placeholder="Insira sua senha">
+</form> <br><br><br>
+
+<!--
+    Como funciona a tag "value":
+-->
+
+<form>
+    E-mail: <input type="text" name="email" value="Ex: pessoal.jvls@gmail.com"><br>
+    Senha: <input type="password" name="senha" value="Ex: 1234">
+</form> <br><br><br>
+
+<!-- 
+    Como funciona a tag "pattern":
+OBS: usar o site: https://www.regexpal.com/ para padronizar as expressões. Exemplo da expressão de CPF:
+[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}
+-->
+
+<form>
+    CPF: <input type="text" name="cpf" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}">
+</form><br> <br> <br> <br>
+
+<!--
+    Quando quisermos colocar um local para preenchimento de um texto/carta/e-mail:
+-->
+
+<form>
+    Título: <input type="text" name="título"><br>
+    Descrição: <textarea name="Descrição"></textarea>
+</form> <br> <br> <br>
+
+<!-- 
+    Para criar um formulário do tipo selecionável, utilizamos a o type "radio".
+
+    Além disso, podemos utilizar a tag "label" e complementar o input com o "id" e o  "value" para, ao clicar no nome, a opção referente ao nome ser marcada.
+-->
+
+<form>
+    <label for="homem">Homem</label>
+    <input type="radio" name="sexo" id="homem" value="homem"><br>
+    <label for="mulher">Mulher</label>
+    <input type="radio" name="sexo" id="mulher" value="mulher"><br>
+    <label for="outros">Prefiro não dizer</label>
+    <input type="radio" name="sexo" id="outros" value="outros">
+</form> <br> <br> <br>
+
+<!--
+    Também podemos utilizar a tag "Fieldset" para organizar os formulários a serem preenchidos:
+-->
+
+    <form>
+        <fieldset>
+            <legend>Login</legend>
+        E-mail: <input type="text" name="email"><br>
+        Senha: <input type="password" name="senha">
+        </fieldset>
+    </form><br> <br> <br> <br>
+
+<!--
+    Mas como o formulário será enviado?
+    Basta criar um botão com o type = "submit". Assim, o formulário será enviado para a pasta destinada pelo "method" e "action"
+-->
+
+<form>
+    <fieldset>
+        <legend>Login</legend>
+    E-mail: <input type="text" name="email"><br>
+    Senha: <input type="password" name="senha"><br>
+    <button type="submit">Logar</button>
+    </fieldset>
+</form><br> <br> <br> <br>
